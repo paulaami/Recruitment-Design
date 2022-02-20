@@ -3,48 +3,50 @@
 }
 
 .darkblue-background {
- background-color: $blue;
+  background-color: $blue;
 }
 
 // H E A D E R
 
-.subpage .header {
-  border-bottom: 1px solid $light-gray;
-  &__container {
-    position: relative;
-    height: 16.2rem;
-    background-image: url("../assets/img/lessons_about.png");
+.subpage {
+  .header {
+    border-bottom: 1px solid $light-gray;
+    &__container {
+      position: relative;
+      height: 16.2rem;
+      background-image: url("../assets/img/lessons_about.png");
+    }
+
+    &__nav {
+      height: 5.5rem;
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $light-gray;
+      }
+      .slash {
+        padding: 0 1rem;
+      }
+
+      &-home {
+        text-decoration: underline;
+      }
+    }
   }
 
-  &__nav {
-    height: 5.5rem;
-    display: flex;
-    align-items: center;
-
-    span {
-      color: $light-gray;
-    }
-    .slash {
-      padding: 0 1rem;
-    }
-
-    &-home {
-      text-decoration: underline;
-    }
+  .section__collection {
+   padding-top: 1.9rem;
   }
 }
 
 // SECTION
 
 .section__description {
- padding: 3.9rem 0;
+  padding: 3.9rem 0;
   &-heading {
-   margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
     font-size: 2.4rem;
   }
 }
 
-
-.subpage .section__collection {
-  padding-top: 1.9rem;
-}

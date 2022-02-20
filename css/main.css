@@ -239,6 +239,10 @@ h2 {
   text-decoration: underline;
 }
 
+.subpage .section__collection {
+  padding-top: 1.9rem;
+}
+
 .section__description {
   padding: 3.9rem 0;
 }
@@ -246,10 +250,6 @@ h2 {
 .section__description-heading {
   margin-bottom: 2.5rem;
   font-size: 2.4rem;
-}
-
-.subpage .section__collection {
-  padding-top: 1.9rem;
 }
 
 @media screen and (min-width: 375px) {
@@ -333,6 +333,13 @@ h2 {
   }
   .subpage .header__nav span {
     font-size: 1.8rem;
+  }
+  .subpage .section__collection {
+    padding-top: 6.2rem;
+  }
+  .subpage .section__collection .next-box {
+    width: 29.5rem;
+    height: 31.5rem;
   }
   .about__page .header__container {
     background-image: url("../assets/img/lessons_about_large.png");

@@ -71,16 +71,26 @@
 
   // A B O U T   P A G E
 
-  .subpage .header {
-    &__container {
-      height: 24rem;
+  .subpage {
+    .header {
+      &__container {
+        height: 24rem;
+      }
+
+      &__nav {
+        height: 8.2rem;
+
+        span {
+          font-size: 1.8rem;
+        }
+      }
     }
 
-    &__nav {
-      height: 8.2rem;
-
-      span {
-        font-size: 1.8rem;
+    .section__collection {
+      padding-top: 6.2rem;
+      .next-box {
+        width: 29.5rem;
+        height: 31.5rem;
       }
     }
   }
