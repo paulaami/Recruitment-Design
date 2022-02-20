@@ -2,6 +2,7 @@ const burgerBtn = document.querySelector(".navigation__container-hamburger");
 const icon = burgerBtn.querySelector(".icon");
 const mediaQuery = window.matchMedia("(min-width: 1439px)");
 
+
 const handleNav = () => {
   const nav = document.querySelector(".list-level-one");
   nav.classList.toggle("active");
@@ -24,3 +25,23 @@ const changeIcon = () => {
 
 mediaQuery.addListener(changeIcon);
 burgerBtn.addEventListener("click", handleNav);
+
+
+const currentPage = document.querySelector('.header__nav-current');
+const aboutLink = document.querySelector('.about-link');
+const collectionLink = document.querySelector('.collection-link');
+let pathname = window.location.pathname;
+
+switch(pathname) {
+  case '/about.html' :
+    currentPage.textContent = 'About';
+    aboutLink.style.color = '#000';
+    break;
+    case '/collection.html' :
+    currentPage.textContent = 'Collection';
+    collectionLink.style.color = '#fff';
+    break;
+}
+
+
+console.log(window.location.pathname)
