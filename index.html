@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruitment Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <nav class="navigation">
+      <div class="navigation__container">
+        <div class="navigation__container-logo">
+          <h1 class="navigation__container-logo-name">Product Name</h1>
+        </div>
+        <ul class="navigation__container-list list-level-one">
+          <li class="navigation__container-list-item">
+            <a class="navigation__container-list-link" href="">About</a>
+          </li>
+          <li class="navigation__container-list-item">
+            <a class="navigation__container-list-link" href="">Collection</a>
+            <ul class="navigation__container-list list-level-two">
+              <li class="navigation__container-list-item">
+                <a class="navigation__container-list-link" href=""
+                  >Collection Item</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button class="navigation__container-hamburger" aria-expanded="false">
+          <img class="icon" src="./assets/svg/hamburger.svg" alt="" />
+        </button>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__container-img">
+          <img src="./assets/img/lessons.png" alt="" />
+        </div>
+        <nav class="header__nav"></nav>
+      </div>
+    </header>
+
+    <section class="section__collection">
+      <div class="container">
+        <div class="section__collection-top">
+         <h2 class="section__collection-top-header">Collection</h2>
+         <button class="section__collection-top-btn">see all</button>
+        </div>
+        <div class="section__collection-bottom">
+         <div class="section__collection-bottom-box">
+          <img class="img-responsive" src="./assets/img/book_large.png" alt="second photo of books with a plant">
+          <img class="box-img" src="./assets/img/book.png" alt="photo of books with a plant">
+          <p>Collection Item</p>
+         </div>
+         <div class="section__collection-bottom-box">
+          <img class="img-responsive" src="./assets/img/book_large.png" alt="second photo of books with a plant">
+          <img class="box-img" src="./assets/img/book.png" alt="second photo of books with a plant">
+          <p>Collection Item</p>
+         </div>
+         <div class="section__collection-bottom-box">
+          <img class="img-responsive" src="./assets/img/book_large.png" alt="second photo of books with a plant">
+          <img class="box-img" src="./assets/img/book.png" alt="third photo of books with a plant">
+          <p>Collection Item</p>
+         </div>
+         <div class="section__collection-bottom-box">
+          <img class="img-responsive" src="./assets/img/book_large.png" alt="second photo of books with a plant">
+          <img class="box-img" src="./assets/img/book.png" alt="another photo of books with a plant">
+          <p>Collection Item</p>
+         </div>
+
+        </div>
+      </div>
+    </section>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
