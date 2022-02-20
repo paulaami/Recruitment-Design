@@ -32,13 +32,15 @@ let pathname = window.location.pathname;
 
 switch (pathname) {
   case "/about.html":
+  case "/Recruitment-Design/about.html":
     currentPage.textContent = "About";
     aboutLink.style.color = "#000";
     break;
   case "/collection.html":
+  case "/Recruitment-Design/collection.html":
     currentPage.textContent = "Collection";
     collectionLink.style.color = "#fff";
     break;
 }
 
-console.log(window.location.pathname);
+console.log(pathname);
