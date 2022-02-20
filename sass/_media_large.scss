@@ -72,12 +72,33 @@
     &__container {
       background-image: url("../assets/img/lessons_about_large.png");
       height: 24rem;
+
+      &-title {
+        font-size: 6rem;
+      }
+    }
+
+    &__nav {
+      height: 8.2rem;
+
+      span {
+        font-size: 1.8rem;
+      }
     }
   }
 
   .section__description {
+    padding: 6.6rem 0;
+    &-heading {
+      margin-bottom: 3.5rem;
+      font-size: 4.8rem;
+    }
     &-wrapper {
       width: 50%;
+
+      p {
+        font-size: 1.8rem;
+      }
     }
   }
 }
