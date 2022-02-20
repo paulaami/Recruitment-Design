@@ -66,8 +66,6 @@ h2 {
     }
 
     .list-level-two {
-      position: absolute;
-      top: 6rem;
       display: none;
     }
 
@@ -81,11 +79,22 @@ h2 {
       width: 100%;
       display: none;
 
-      &-item:hover > .list-level-two {
-        display: block;
+      &-item {
+        position: relative;
+        // margin-bottom: 2rem;
       }
       &-link {
         color: $light-gray;
+      }
+
+      &-item:hover > .list-level-two {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 5rem;
+        background-color: inherit;
+        padding: 1rem;
+        width: 17rem;
       }
     }
 
@@ -113,6 +122,14 @@ h2 {
     background-image: url("../assets/img/lessons.png");
     background-size: cover;
     background-position: center;
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.6rem;
+    }
   }
 }
 
@@ -146,7 +163,7 @@ h2 {
     flex-wrap: wrap;
     margin: 0 auto;
     &-box {
-      margin-bottom: 5rem;
+      margin-bottom: 7.4rem;
 
       .box-img {
         display: block;

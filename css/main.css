@@ -71,8 +71,6 @@ h2 {
 }
 
 .navigation__container .list-level-two {
-  position: absolute;
-  top: 6rem;
   display: none;
 }
 
@@ -92,12 +90,22 @@ h2 {
   display: none;
 }
 
-.navigation__container-list-item:hover > .list-level-two {
-  display: block;
+.navigation__container-list-item {
+  position: relative;
 }
 
 .navigation__container-list-link {
   color: #9D9D9D;
+}
+
+.navigation__container-list-item:hover > .list-level-two {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5rem;
+  background-color: inherit;
+  padding: 1rem;
+  width: 17rem;
 }
 
 .navigation__container-hamburger {
@@ -120,6 +128,15 @@ h2 {
   background-image: url("../assets/img/lessons.png");
   background-size: cover;
   background-position: center;
+}
+
+.header__container-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3.6rem;
 }
 
 .section__collection {
@@ -165,7 +182,7 @@ h2 {
 }
 
 .section__collection-bottom-box {
-  margin-bottom: 5rem;
+  margin-bottom: 7.4rem;
 }
 
 .section__collection-bottom-box .box-img {
@@ -182,31 +199,25 @@ h2 {
   margin-top: 0.7rem;
 }
 
-/* A B O U T   P A G E */
 .blue-background {
   background-color: #E1EAE4;
 }
 
-.about__page .header {
+.darkblue-background {
+  background-color: #6d888e;
+}
+
+.subpage .header {
   border-bottom: 1px solid #9D9D9D;
 }
 
-.about__page .header__container {
+.subpage .header__container {
   position: relative;
   height: 16.2rem;
   background-image: url("../assets/img/lessons_about.png");
 }
 
-.about__page .header__container-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 3.6rem;
-}
-
-.about__page .header__nav {
+.subpage .header__nav {
   height: 5.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,15 +227,15 @@ h2 {
           align-items: center;
 }
 
-.about__page .header__nav span {
+.subpage .header__nav span {
   color: #9D9D9D;
 }
 
-.about__page .header__nav .slash {
+.subpage .header__nav .slash {
   padding: 0 1rem;
 }
 
-.about__page .header__nav-home {
+.subpage .header__nav-home {
   text-decoration: underline;
 }
 
@@ -235,6 +246,10 @@ h2 {
 .section__description-heading {
   margin-bottom: 2.5rem;
   font-size: 2.4rem;
+}
+
+.subpage .section__collection {
+  padding-top: 1.9rem;
 }
 
 @media screen and (min-width: 375px) {
@@ -286,6 +301,9 @@ h2 {
   .header__container {
     background-image: url("../assets/img/lessons_large.png");
   }
+  .header__container-title {
+    font-size: 6rem;
+  }
   .section__collection {
     padding-top: 7rem;
   }
@@ -307,18 +325,17 @@ h2 {
     margin-top: 2rem;
     font-size: 1.8rem;
   }
-  .about__page .header__container {
-    background-image: url("../assets/img/lessons_about_large.png");
+  .subpage .header__container {
     height: 24rem;
   }
-  .about__page .header__container-title {
-    font-size: 6rem;
-  }
-  .about__page .header__nav {
+  .subpage .header__nav {
     height: 8.2rem;
   }
-  .about__page .header__nav span {
+  .subpage .header__nav span {
     font-size: 1.8rem;
+  }
+  .about__page .header__container {
+    background-image: url("../assets/img/lessons_about_large.png");
   }
   .section__description {
     padding: 6.6rem 0;

@@ -37,6 +37,9 @@
   .header {
     &__container {
       background-image: url("../assets/img/lessons_large.png");
+      &-title {
+        font-size: 6rem;
+      }
     }
   }
 
@@ -68,14 +71,9 @@
 
   // A B O U T   P A G E
 
-  .about__page .header {
+  .subpage .header {
     &__container {
-      background-image: url("../assets/img/lessons_about_large.png");
       height: 24rem;
-
-      &-title {
-        font-size: 6rem;
-      }
     }
 
     &__nav {
@@ -84,6 +82,12 @@
       span {
         font-size: 1.8rem;
       }
+    }
+  }
+
+  .about__page .header {
+    &__container {
+      background-image: url("../assets/img/lessons_about_large.png");
     }
   }
 
