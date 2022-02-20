@@ -1,0 +1,51 @@
+/* A B O U T   P A G E */
+
+.blue-background {
+  background-color: $light-blue;
+}
+
+// H E A D E R
+
+.about__page .header {
+  border-bottom: 1px solid $light-gray;
+  &__container {
+    position: relative;
+    height: 16.2rem;
+    background-image: url("../assets/img/lessons_about.png");
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3.6rem;
+    }
+  }
+
+  &__nav {
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $light-gray;
+    }
+    .slash {
+      padding: 0 1rem;
+    }
+
+    &-home {
+      text-decoration: underline;
+    }
+  }
+}
+
+// SECTION
+
+.section__description {
+ padding: 3.9rem 0;
+  &-heading {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+  }
+}
