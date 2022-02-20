@@ -1,0 +1,68 @@
+@media screen and (min-width: 1439px) {
+  h2 {
+    font-size: 4.8rem;
+  }
+
+  // H O M E
+  .navigation {
+    &__container {
+      position: relative;
+      padding: 0 2.4rem;
+      &-list {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        top: auto;
+        padding-left: 0;
+        left: 30rem;
+        width: 42rem;
+
+        &-link {
+          padding-right: 2.5rem;
+          font-size: 1.8rem;
+        }
+      }
+
+      &-hamburger {
+        .icon {
+          display: none;
+        }
+        .account {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .header {
+    &__container {
+      background-image: url("../assets/img/lessons_large.png");
+    }
+  }
+
+  .section__collection {
+    padding-top: 7rem;
+    &-top {
+      &-btn {
+        width: 10.8rem;
+        height: 4.4rem;
+        font-weight: 400;
+      }
+    }
+    &-bottom {
+      &-box {
+        padding: 0;
+        .img-responsive {
+          display: block;
+        }
+        .box-img {
+          display: none;
+        }
+        p {
+          margin-top: 2rem;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

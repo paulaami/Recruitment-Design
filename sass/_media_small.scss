@@ -1,0 +1,19 @@
+@media screen and (min-width: 375px) {
+  // H O M E
+  .section__collection {
+    &-bottom {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (min-width: 425px) {
+  // H O M E
+  .section__collection {
+    &-bottom {
+      &-box {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}

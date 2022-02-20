@@ -15,17 +15,12 @@ const handleNav = () => {
 };
 
 const changeIcon = () => {
- 
   if (mediaQuery.matches) {
-    icon.src = `./assets/svg/account.svg`;
     burgerBtn.disabled = true;
-    console.log(allImg)
   } else {
-    icon.src = `./assets/svg/hamburger.svg`;
     burgerBtn.disabled = false;
   }
 };
-
 
 mediaQuery.addListener(changeIcon);
 burgerBtn.addEventListener("click", handleNav);
