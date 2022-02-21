@@ -210,16 +210,17 @@ h2 {
 }
 
 .subpage .header__nav {
-  height: 5.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 5.5rem;
 }
 
-.subpage .header__nav span {
+.subpage .header__nav span,
+.subpage .header__nav a {
   color: #9D9D9D;
 }
 

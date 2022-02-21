@@ -20,7 +20,7 @@
      <a href="index.html">Product Name</a>
     </h1>
    </div>
-   <ul class="navigation__container-list darkblue-background">
+   <ul class="navigation__container-list darkblue-background" id="navList">
     <li class="navigation__container-list-item">
      <a
               class="navigation__container-list-link text-style"
@@ -29,22 +29,22 @@
     </li>
     <li class="navigation__container-list-item">
      <a
-              class="navigation__container-list-link collection-link text-style"
+              class="navigation__container-list-link collection-link text-style" id="collectionLink"
               href="collection.html"
               >Collection</a>
     </li>
    </ul>
-   <button class="navigation__container-hamburger darkblue-background" aria-expanded="false">
-    <img class="icon burger-icon" src="./assets/svg/hamburger-white.svg" alt="" />
-    <img class="icon close-icon" src="./assets/svg/close-white.svg" alt="" />
+   <button class="navigation__container-hamburger darkblue-background" aria-expanded="false" id="burgerBtn">
+    <img class="icon burger-icon" id="burgerIcon" src="./assets/svg/hamburger-white.svg" alt="hamburger icon menu" />
+    <img class="icon close-icon" id="closeIcon" src="./assets/svg/close-white.svg" alt="close icon" />
    </button>
-   <img class="account" src="./assets/svg/account-white.svg" alt="" />
+   <img class="account" src="./assets/svg/account-white.svg" alt="account icon" />
   </div>
  </nav>
  <header class="header">
   <nav class="header__nav">
    <div class="container">
-    <span class="header__nav-home text-style">Home</span><span class="slash">/</span><span class="header__nav-current text-style"></span><span class="slash">/</span><span class="header__nav-subpage text-style"></span>
+    <span class="header__nav-home text-style"><a href="index.html">Home</a></span><span class="slash">/</span><span class=" text-style"><a class="header__nav-current" id="currentPage" href="collection.html"></a></span><span class="slash">/</span><span class="header__nav-subpage text-style" id="currentSubpage"></span>
    </div>
   </nav>
  </header>

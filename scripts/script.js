@@ -4,9 +4,9 @@ const closeIcon = burgerBtn.querySelector(".close-icon");
 let pathname = window.location.pathname;
 
 const handleNav = () => {
-  const nav = document.querySelector(".navigation__container-list");
-  nav.classList.toggle("active");
-  if (nav.classList.contains("active")) {
+  const navList = document.querySelector(".navigation__container-list");
+  navList.classList.toggle("active");
+  if (navList.classList.contains("active")) {
     burgerIcon.style.display = "none";
     closeIcon.style.display = "block";
     burgerBtn.setAttribute("aria-expanded", "true");
@@ -35,6 +35,3 @@ const detectPage = () => {
 };
 
 detectPage();
-
-
-console.log(pathname);

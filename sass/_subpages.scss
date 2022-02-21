@@ -18,11 +18,12 @@
     }
 
     &__nav {
-      height: 5.5rem;
       display: flex;
       align-items: center;
+      height: 5.5rem;
 
-      span {
+      span,
+      a {
         color: $light-gray;
       }
       .slash {
@@ -48,8 +49,8 @@
     font-size: 2.4rem;
   }
   &-wrapper {
-   max-width: 62.3rem;
- }
+    max-width: 62.3rem;
+  }
 }
 
 //  C O L L E C T I O N   P A G E
@@ -72,7 +73,6 @@
       }
     }
   }
-
   .next-box {
     display: none;
   }

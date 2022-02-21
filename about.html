@@ -1,79 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recruitment Task</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
 
-  <body class="subpage about__page">
-    <nav class="navigation blue-background">
-      <div class="navigation__container">
-        <div class="navigation__container-logo">
-          <h1 class="navigation__container-logo-name"> <a href="index.html">Product Name</a></h1>
-        </div>
-        <ul class="navigation__container-list blue-background">
-          <li class="navigation__container-list-item">
-            <a class="navigation__container-list-link text-style about-link" href="#">About</a>
-          </li>
-          <li class="navigation__container-list-item">
-            <a class="navigation__container-list-link text-style" href="collection.html">Collection</a>
-          </li>
-        </ul>
-        <button
-          class="navigation__container-hamburger blue-background"
-          aria-expanded="false"
-        >
-        <img class="icon burger-icon" src="./assets/svg/hamburger.svg" alt="" />
-        <img class="icon close-icon" src="./assets/svg/close.svg" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruitment Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body class="subpage about__page">
+  <nav class="navigation blue-background">
+    <div class="navigation__container">
+      <div class="navigation__container-logo">
+        <h1 class="navigation__container-logo-name">
+          <a href="index.html">Product Name</a></h1>
+      </div>
+      <ul class="navigation__container-list blue-background" id="navList">
+        <li class="navigation__container-list-item">
+          <a class="navigation__container-list-link text-style about-link" id="aboutLink" href="#">About</a>
+        </li>
+        <li class="navigation__container-list-item">
+          <a class="navigation__container-list-link text-style" href="collection.html">Collection</a>
+        </li>
+      </ul>
+      <button class="navigation__container-hamburger blue-background" aria-expanded="false" id="burgerBtn">
+        <img class="icon burger-icon" id="burgerIcon" src="./assets/svg/hamburger.svg" alt="hamburger icon menu" />
+        <img class="icon close-icon" id="closeIcon" src="./assets/svg/close.svg" alt="close icon" />
       </button>
-      <img class="account" src="./assets/svg/account.svg" alt="" />
+      <img class="account" src="./assets/svg/account.svg" alt="account icon" />
+    </div>
+  </nav>
+  <header class="header">
+    <div class="header__container">
+      <h2 class="header__container-title">About</h2>
+    </div>
+    <nav class="header__nav">
+      <div class="container">
+        <span class="header__nav-home text-style"><a href="index.html">Home</a> </span><span class="slash">/</span><span class="header__nav-current text-style" id="currentPage"></span>
       </div>
     </nav>
-    <header class="header">
-      <div class="header__container">
-        <h2 class="header__container-title">About</h2>
-      </div>
-      <nav class="header__nav">
-        <div class="container">
-          <span class="header__nav-home text-style">Home</span><span class="slash">/</span
-          ><span class="header__nav-current text-style"></span>
-        </div>
-      </nav>
-    </header>
+  </header>
 
-    <section class="section__description">
-      <div class="container">
-        <h3 class="section__description-heading">Heading</h3>
-        <div class="section__description-wrapper">
-          <p class="text-style">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            aliquid ex ea commodi consequatur? Quis autem vel eum iure
-            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-            pariatur?
-          </p>
-        </div>
+  <section class="section__description">
+    <div class="container">
+      <h3 class="section__description-heading">Heading</h3>
+      <div class="section__description-wrapper">
+        <p class="text-style">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+          eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+          qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+          sed quia non numquam eius modi tempora incidunt ut labore et dolore
+          magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+          aliquid ex ea commodi consequatur? Quis autem vel eum iure
+          reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+          consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+          pariatur?
+        </p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="./scripts/script.js"></script>
-  </body>
+  <script src="./scripts/script.js"></script>
+</body>
+
 </html>
