@@ -1,10 +1,31 @@
-const burgerBtn = document.querySelector(".navigation__container-hamburger");
-const burgerIcon = burgerBtn.querySelector(".burger-icon");
-const closeIcon = burgerBtn.querySelector(".close-icon");
-let pathname = window.location.pathname;
 
-const handleNav = () => {
-  const navList = document.querySelector(".navigation__container-list");
+const viewElems = {}
+
+const getDOMElem = id => {
+  return document.getElementById(id)
+}
+
+const connectHTMLElems = () => {
+  viewElems.burgerBtn = getDOMElem('burgerBtn')
+  viewElems.burgerIcon = getDOMElem('burgerIcon')
+  viewElems.closeIcon = getDOMElem('closeIcon')
+
+  viewElems.navList = getDOMElem('navList')
+
+  viewElems.currentPage = getDOMElem('currentPage')
+  viewElems.currentSubpage = getDOMElem('currentSubpage')
+
+  viewElems.aboutLink = getDOMElem('aboutLink')
+  viewElems.collectionLink = getDOMElem('collectionLink')
+}
+
+const initializeApp = () => {
+  connectHTMLElems()
+  viewElems.burgerBtn.addEventListener('click', onClickMenu)
+}
+
+
+const onClickMenu = () => {
   navList.classList.toggle("active");
   if (navList.classList.contains("active")) {
     burgerIcon.style.display = "none";
@@ -17,7 +38,16 @@ const handleNav = () => {
   }
 };
 
-burgerBtn.addEventListener("click", handleNav);
+document.addEventListener('DOMContentLoaded', initializeApp)
+
+
+const burgerBtn = document.querySelector(".navigation__container-hamburger");
+const burgerIcon = burgerBtn.querySelector(".burger-icon");
+const closeIcon = burgerBtn.querySelector(".close-icon");
+let pathname = window.location.pathname;
+
+
+burgerBtn.addEventListener("click", onClickMenu);
 
 const detectPage = () => {
   const currentPage = document.querySelector(".header__nav-current");
