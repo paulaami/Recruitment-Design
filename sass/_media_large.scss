@@ -27,12 +27,10 @@
       }
 
       &-hamburger {
-        .icon {
-          display: none;
-        }
-        .account {
-          display: block;
-        }
+        display: none;
+      }
+      .account {
+        display: block;
       }
     }
   }

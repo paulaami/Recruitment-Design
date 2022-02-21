@@ -12,12 +12,12 @@ html {
 }
 
 body {
+  height: 144rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: #000;
   background-color: #fff;
-  height: 144rem;
 }
 
 ul {
@@ -74,10 +74,6 @@ h2 {
   font-weight: 400;
 }
 
-.navigation__container .list-level-two {
-  display: none;
-}
-
 .navigation__container-list {
   position: absolute;
   top: 8rem;
@@ -89,36 +85,24 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-left: 1.6rem;
+  padding: 2rem 0 2rem 1.6rem;
   width: 100%;
   display: none;
-}
-
-.navigation__container-list-item {
-  position: relative;
+  background-color: #fff;
 }
 
 .navigation__container-list-link {
   color: #9D9D9D;
 }
 
-.navigation__container-list-item:hover > .list-level-two {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 5rem;
-  background-color: inherit;
-  padding: 1rem;
-  width: 17rem;
-}
-
 .navigation__container-hamburger {
+  display: block;
   border: transparent;
   background-color: #fff;
   cursor: pointer;
 }
 
-.navigation__container-hamburger .account {
+.navigation__container .account {
   display: none;
 }
 
@@ -361,10 +345,10 @@ h2 {
   .navigation__container-list-link {
     padding-right: 2.5rem;
   }
-  .navigation__container-hamburger .icon {
+  .navigation__container-hamburger {
     display: none;
   }
-  .navigation__container-hamburger .account {
+  .navigation__container .account {
     display: block;
   }
   .header__container {
