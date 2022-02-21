@@ -1,70 +1,69 @@
-'use strict'
+"use strict";
 
-import { mapListToDOMElems } from './DOMActions.js'
+import { mapListToDOMElems } from "./DOMActions.js";
 
+// Creating class
 class pageTemplate {
   constructor() {
-    this.viewElems = {}
+    this.viewElems = {};
+    this.initializeApp();
   }
 
+  initializeApp = () => {
+    this.connectDOMElems();
+    this.setupListener();
+    this.detectPage();
+  };
+
+  // List of all elements with ID's from html
   connectDOMElems = () => {
-    // list of all elements with ID's from html
-    const listofIds = [...document.querySelectorAll('[id]')].map(el => console.log(el.id))
-    this.viewElems = mapListToDOMElems(listofIds)
+    const listofIds = [...document.querySelectorAll("[id]")].map((el) => el.id);
+    this.viewElems = mapListToDOMElems(listofIds);
+  };
+
+  // Toggle menu icon classes
+  onClickMenu = () => {
+    this.viewElems.navList.classList.toggle("active");
+    this.viewElems.burgerIcon.classList.toggle("hide");
+    this.viewElems.closeIcon.classList.toggle("active");
+
+    this.viewElems.navList.classList.contains("active")
+      ? this.setAriaAttr(true)
+      : this.setAriaAttr(false);
+  };
+
+  setAriaAttr = (boolean) => {
+    this.viewElems.burgerBtn.setAttribute("aria-expanded", boolean);
+  };
+
+  // Detects the current page and edits navigation links and colors
+  pathname = window.location.pathname;
+
+  detectPage = () => {
+    if (this.pathname.includes("about")) {
+      this.changeCurrentLink("About");
+      this.viewElems.aboutLink.style.color = "#000";
+    } else if ( this.pathname.includes("collection") || this.pathname.includes("item")) {
+      this.changeCurrentLink("Collection");
+      this.viewElems.collectionLink.style.color = "#fff";
+
+      this.detectSinglePage()
+    }
+  };
+
+  detectSinglePage = () => {
+    if (this.viewElems.currentSubpage) this.viewElems.currentSubpage.textContent = "Collection Item";
   }
 
-}
-const viewElems = {}
+  changeCurrentLink = (str) => {
+    this.viewElems.currentPage.textContent = `${str}`;
+  };
 
-const getDOMElem = id => {
-  return document.getElementById(id)
-}
+  // Adds Listener to hamburger menu
 
-const connectHTMLElems = () => {
-  viewElems.burgerBtn = getDOMElem('burgerBtn')
-  viewElems.burgerIcon = getDOMElem('burgerIcon')
-  viewElems.closeIcon = getDOMElem('closeIcon')
-
-  viewElems.navList = getDOMElem('navList')
-
-  viewElems.currentPage = getDOMElem('currentPage')
-  viewElems.currentSubpage = getDOMElem('currentSubpage')
-
-  viewElems.aboutLink = getDOMElem('aboutLink')
-  viewElems.collectionLink = getDOMElem('collectionLink')
+  setupListener = () => {
+    this.viewElems.burgerBtn.addEventListener("click", this.onClickMenu);
+  };
 }
 
-const initializeApp = () => {
-  connectHTMLElems()
-  viewElems.burgerBtn.addEventListener('click', onClickMenu)
-  detectPage()
-}
-
-
-const onClickMenu = () => {
-  viewElems.navList.classList.toggle("active")
-  viewElems.burgerIcon.classList.toggle("hide")
-  viewElems.closeIcon.classList.toggle("active")
-
-  viewElems.navList.classList.contains("active") ? setAriaAttr(true) : setAriaAttr(false)
-};
-
-const setAriaAttr = (boolean) => {
-  viewElems.burgerBtn.setAttribute("aria-expanded", boolean);
-}
-
-
-document.addEventListener('DOMContentLoaded', initializeApp)
-
-let pathname = window.location.pathname;
-const detectPage = () => {
-  if (pathname.includes("about")) {
-    viewElems.currentPage.textContent = "About";
-    viewElems.aboutLink.style.color = "#000";
-  } else if (pathname.includes("collection") || pathname.includes("item")) {
-    viewElems.currentPage.textContent = "Collection";
-    viewElems.collectionLink.style.color = "#fff";
-    if (currentSubpage) viewElems.currentSubpage.textContent = "Collection Item";
-  }
-};
-
+document.addEventListener("DOMContentLoaded", new pageTemplate());
