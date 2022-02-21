@@ -29,6 +29,14 @@ a {
   color: #000;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 1px solid #000;
+}
+
 h2 {
   font-weight: 700;
   font-size: 2.4rem;
@@ -104,6 +112,8 @@ h2 {
 
 .navigation__container .account {
   display: none;
+  border: transparent;
+  background: inherit;
 }
 
 .close-icon {

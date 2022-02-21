@@ -29,6 +29,14 @@ ul {
 a {
   text-decoration: none;
   color: $main-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 1px solid $main-black;
 }
 
 h2 {
@@ -96,6 +104,8 @@ h2 {
     }
     .account {
       display: none;
+      border: transparent;
+      background: inherit;
     }
   }
 }

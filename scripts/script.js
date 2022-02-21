@@ -36,7 +36,7 @@ class pageTemplate {
     this.viewElems.burgerBtn.setAttribute("aria-expanded", boolean);
   };
 
-  // Detects the current page and edits navigation links and colors
+  // Detects the current page and edits navigation active links and colors
   pathname = window.location.pathname;
 
   detectPage = () => {
