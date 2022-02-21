@@ -1,3 +1,5 @@
+//  S U B P A G E S
+
 .blue-background {
   background-color: $light-blue;
 }
@@ -5,8 +7,6 @@
 .darkblue-background {
   background-color: $blue;
 }
-
-// H E A D E R
 
 .subpage {
   .header {
@@ -36,11 +36,11 @@
   }
 
   .section__collection {
-   padding-top: 1.9rem;
+    padding-top: 1.9rem;
   }
 }
 
-// SECTION
+//  A B O U T   P A G E
 
 .section__description {
   padding: 3.9rem 0;
@@ -48,5 +48,25 @@
     margin-bottom: 2.5rem;
     font-size: 2.4rem;
   }
+}
+
+//  C O L L E C T I O N   P A G E
+
+.collection__page .navigation {
+  &__container {
+    &-logo {
+      a {
+        color: $pure-white;
+      }
+    }
+  }
+}
+
+
+//  C O L L E C T I O N   I T E M
+.collection__item .header {
+ &__nav {
+  height: 4.9rem;
+ }
 }
 

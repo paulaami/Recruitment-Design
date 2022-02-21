@@ -1,20 +1,25 @@
 const burgerBtn = document.querySelector(".navigation__container-hamburger");
-const icon = burgerBtn.querySelector(".icon");
+const burgerIcon = burgerBtn.querySelector(".burger-icon");
+const closeIcon = burgerBtn.querySelector(".close-icon");
 const mediaQuery = window.matchMedia("(min-width: 1439px)");
 
 const handleNav = () => {
   const nav = document.querySelector(".list-level-one");
   nav.classList.toggle("active");
   if (nav.classList.contains("active")) {
-    icon.src = `./assets/svg/close.svg`;
+    burgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
     burgerBtn.setAttribute("aria-expanded", "true");
   } else {
-    icon.src = `./assets/svg/hamburger.svg`;
+    burgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
     burgerBtn.setAttribute("aria-expanded", "false");
   }
 };
 
-const changeIcon = () => {
+burgerBtn.addEventListener("click", handleNav);
+
+const switchIcon = () => {
   if (mediaQuery.matches) {
     burgerBtn.disabled = true;
   } else {
@@ -22,25 +27,38 @@ const changeIcon = () => {
   }
 };
 
-mediaQuery.addListener(changeIcon);
-burgerBtn.addEventListener("click", handleNav);
+mediaQuery.addListener(switchIcon);
 
 const currentPage = document.querySelector(".header__nav-current");
+const currentSubpage = document.querySelector(".header__nav-subpage");
 const aboutLink = document.querySelector(".about-link");
 const collectionLink = document.querySelector(".collection-link");
 let pathname = window.location.pathname;
 
-switch (pathname) {
-  case "/about.html":
-  case "/Recruitment-Design/about.html":
+const detectPage = () => {
+  if (pathname.includes("about")) {
     currentPage.textContent = "About";
     aboutLink.style.color = "#000";
-    break;
-  case "/collection.html":
-  case "/Recruitment-Design/collection.html":
+  } else if (pathname.includes("collection") || pathname.includes("item")) {
     currentPage.textContent = "Collection";
     collectionLink.style.color = "#fff";
-    break;
-}
+    if (currentSubpage) currentSubpage.textContent = 'Collection Item'
+  }
+};
+
+detectPage();
+
+// switch (pathname) {
+//   case "/about.html":
+//   case "/Recruitment-Design/about.html": //path contains about
+//     currentPage.textContent = "About";
+//     aboutLink.style.color = "#000";
+//     break;
+//   case "/collection.html":
+//   case "/Recruitment-Design/collection.html": //path contains collection
+//     currentPage.textContent = "Collection";
+//     collectionLink.style.color = "#fff";
+//     break;
+// }
 
 console.log(pathname);
