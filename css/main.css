@@ -114,6 +114,10 @@ h2 {
   display: block;
 }
 
+.hide {
+  display: none;
+}
+
 .header__container {
   width: 100%;
   height: 58.3rem;

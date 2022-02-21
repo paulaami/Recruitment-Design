@@ -1,4 +1,19 @@
+'use strict'
 
+import { mapListToDOMElems } from './DOMActions.js'
+
+class pageTemplate {
+  constructor() {
+    this.viewElems = {}
+  }
+
+  connectDOMElems = () => {
+    // list of all elements with ID's from html
+    const listofIds = [...document.querySelectorAll('[id]')].map(el => console.log(el.id))
+    this.viewElems = mapListToDOMElems(listofIds)
+  }
+
+}
 const viewElems = {}
 
 const getDOMElem = id => {
@@ -22,46 +37,34 @@ const connectHTMLElems = () => {
 const initializeApp = () => {
   connectHTMLElems()
   viewElems.burgerBtn.addEventListener('click', onClickMenu)
+  detectPage()
 }
 
 
 const onClickMenu = () => {
-  navList.classList.toggle("active");
-  if (navList.classList.contains("active")) {
-    burgerIcon.style.display = "none";
-    closeIcon.style.display = "block";
-    burgerBtn.setAttribute("aria-expanded", "true");
-  } else {
-    burgerIcon.style.display = "block";
-    closeIcon.style.display = "none";
-    burgerBtn.setAttribute("aria-expanded", "false");
-  }
+  viewElems.navList.classList.toggle("active")
+  viewElems.burgerIcon.classList.toggle("hide")
+  viewElems.closeIcon.classList.toggle("active")
+
+  viewElems.navList.classList.contains("active") ? setAriaAttr(true) : setAriaAttr(false)
 };
+
+const setAriaAttr = (boolean) => {
+  viewElems.burgerBtn.setAttribute("aria-expanded", boolean);
+}
+
 
 document.addEventListener('DOMContentLoaded', initializeApp)
 
-
-const burgerBtn = document.querySelector(".navigation__container-hamburger");
-const burgerIcon = burgerBtn.querySelector(".burger-icon");
-const closeIcon = burgerBtn.querySelector(".close-icon");
 let pathname = window.location.pathname;
-
-
-burgerBtn.addEventListener("click", onClickMenu);
-
 const detectPage = () => {
-  const currentPage = document.querySelector(".header__nav-current");
-  const currentSubpage = document.querySelector(".header__nav-subpage");
-  const aboutLink = document.querySelector(".about-link");
-  const collectionLink = document.querySelector(".collection-link");
   if (pathname.includes("about")) {
-    currentPage.textContent = "About";
-    aboutLink.style.color = "#000";
+    viewElems.currentPage.textContent = "About";
+    viewElems.aboutLink.style.color = "#000";
   } else if (pathname.includes("collection") || pathname.includes("item")) {
-    currentPage.textContent = "Collection";
-    collectionLink.style.color = "#fff";
-    if (currentSubpage) currentSubpage.textContent = "Collection Item";
+    viewElems.currentPage.textContent = "Collection";
+    viewElems.collectionLink.style.color = "#fff";
+    if (currentSubpage) viewElems.currentSubpage.textContent = "Collection Item";
   }
 };
 
-detectPage();
