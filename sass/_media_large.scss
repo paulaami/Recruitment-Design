@@ -71,7 +71,6 @@
     }
   }
 
-
   // S U B P A G E S
   .subpage {
     .header {
@@ -86,15 +85,20 @@
 
     .section__collection {
       padding-top: 6.2rem;
-      .next-box {
-        width: 29.5rem;
-        height: 31.5rem;
-      }
     }
   }
 
+  // C O L L E C T I O N   PAGE
 
-    //  A B O U T   P A G E
+  .collection__page {
+    .next-box {
+      display: block;
+      width: 29.5rem;
+      height: 31.5rem;
+    }
+  }
+
+  //  A B O U T   P A G E
 
   .subpage .header {
     &__container {
@@ -102,18 +106,46 @@
     }
   }
 
-
   .section__description {
-    padding: 6.6rem 0;
+    padding: 7.5rem 0;
     &-heading {
-      margin-bottom: 3.5rem;
+      margin-bottom: 4.5rem;
       font-size: 4.8rem;
     }
+  }
+
+  // S I N G L E   P A G E
+  .collection__item .header {
+    &__nav {
+      height: 8.2rem;
+    }
+  }
+
+  .section__item {
+    padding: 4.8rem 0;
+
+    h2 {
+      font-size: 6rem;
+      margin-bottom: 10rem;
+    }
+
+    h3 {
+      font-size: 4.8rem;
+      margin-bottom: 6rem;
+    }
+
     &-wrapper {
-      width: 50%;
+      display: flex;
+    }
+    .item-small {
+      display: none;
+    }
+    .item-large {
+      display: block;
+      margin-right: 3.5rem;
+      width: 62.3rem;
+      height: 64.4rem;
     }
   }
 }
 
-
-  //  C O L L E C T I O N   P A G E

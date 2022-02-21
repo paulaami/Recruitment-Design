@@ -40,6 +40,10 @@ h2 {
   max-width: 136rem;
 }
 
+.text-style {
+  line-height: 1.5;
+}
+
 .navigation {
   position: -webkit-sticky;
   position: sticky;
@@ -144,7 +148,7 @@ h2 {
 }
 
 .section__collection {
-  padding-top: 4.5rem;
+  padding-top: 4.3rem;
   width: 100%;
 }
 
@@ -155,7 +159,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 3.7rem;
+  margin-bottom: 5.2rem;
 }
 
 .section__collection-top-btn {
@@ -186,7 +190,7 @@ h2 {
 }
 
 .section__collection-bottom-box {
-  margin-bottom: 7.4rem;
+  margin-bottom: 5rem;
 }
 
 .section__collection-bottom-box .box-img {
@@ -244,7 +248,7 @@ h2 {
 }
 
 .subpage .section__collection {
-  padding-top: 1.9rem;
+  padding-top: 1.8rem;
 }
 
 .section__description {
@@ -256,12 +260,59 @@ h2 {
   font-size: 2.4rem;
 }
 
+.section__description-wrapper {
+  max-width: 62.3rem;
+}
+
 .collection__page .navigation__container-logo a {
   color: #fff;
 }
 
+.collection__page .section__collection-bottom-box {
+  margin-bottom: 5rem;
+}
+
+.collection__page .next-box {
+  display: none;
+}
+
 .collection__item .header__nav {
   height: 4.9rem;
+}
+
+.collection__item .header__nav-current {
+  text-decoration: underline;
+}
+
+.section__item {
+  padding: 2.5rem 0;
+}
+
+.section__item h2 {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+}
+
+.section__item h3 {
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.section__item-img {
+  margin-bottom: 4.2rem;
+  width: 100%;
+}
+
+.section__item-description {
+  max-width: 62.2rem;
+}
+
+.section__item .item-small {
+  display: block;
+}
+
+.section__item .item-large {
+  display: none;
 }
 
 @media screen and (min-width: 375px) {
@@ -269,6 +320,10 @@ h2 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .section__item-img {
+    width: 34.3rem;
+    height: 36.6rem;
   }
 }
 
@@ -347,7 +402,8 @@ h2 {
   .subpage .section__collection {
     padding-top: 6.2rem;
   }
-  .subpage .section__collection .next-box {
+  .collection__page .next-box {
+    display: block;
     width: 29.5rem;
     height: 31.5rem;
   }
@@ -355,14 +411,39 @@ h2 {
     background-image: url("../assets/img/lessons_about_large.png");
   }
   .section__description {
-    padding: 6.6rem 0;
+    padding: 7.5rem 0;
   }
   .section__description-heading {
-    margin-bottom: 3.5rem;
+    margin-bottom: 4.5rem;
     font-size: 4.8rem;
   }
-  .section__description-wrapper {
-    width: 50%;
+  .collection__item .header__nav {
+    height: 8.2rem;
+  }
+  .section__item {
+    padding: 4.8rem 0;
+  }
+  .section__item h2 {
+    font-size: 6rem;
+    margin-bottom: 10rem;
+  }
+  .section__item h3 {
+    font-size: 4.8rem;
+    margin-bottom: 6rem;
+  }
+  .section__item-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section__item .item-small {
+    display: none;
+  }
+  .section__item .item-large {
+    display: block;
+    margin-right: 3.5rem;
+    width: 62.3rem;
+    height: 64.4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

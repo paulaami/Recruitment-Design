@@ -41,6 +41,10 @@ h2 {
   max-width: 136rem;
 }
 
+.text-style {
+  line-height: 1.5;
+}
+
 
 
 // N A V I G A T I O N
@@ -143,12 +147,12 @@ h2 {
 // C O L L E C T I O N  
 
 .section__collection {
-  padding-top: 4.5rem;
+  padding-top: 4.3rem;
   width: 100%;
   &-top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3.7rem;
+    margin-bottom: 5.2rem;
 
     &-btn {
       width: 9.2rem;
@@ -170,7 +174,7 @@ h2 {
     flex-wrap: wrap;
     margin: 0 auto;
     &-box {
-      margin-bottom: 7.4rem;
+      margin-bottom: 5rem;
 
       .box-img {
         display: block;

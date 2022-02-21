@@ -28,7 +28,6 @@
       .slash {
         padding: 0 1rem;
       }
-
       &-home {
         text-decoration: underline;
       }
@@ -36,7 +35,7 @@
   }
 
   .section__collection {
-    padding-top: 1.9rem;
+    padding-top: 1.8rem;
   }
 }
 
@@ -48,25 +47,74 @@
     margin-bottom: 2.5rem;
     font-size: 2.4rem;
   }
+  &-wrapper {
+   max-width: 62.3rem;
+ }
 }
 
 //  C O L L E C T I O N   P A G E
 
-.collection__page .navigation {
-  &__container {
-    &-logo {
-      a {
-        color: $pure-white;
+.collection__page {
+  .navigation {
+    &__container {
+      &-logo {
+        a {
+          color: $pure-white;
+        }
       }
+    }
+  }
+
+  .section__collection {
+    &-bottom {
+      &-box {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .next-box {
+    display: none;
+  }
+}
+
+//  C O L L E C T I O N   I T E M
+.collection__item .header {
+  &__nav {
+    height: 4.9rem;
+    &-current {
+      text-decoration: underline;
     }
   }
 }
 
+.section__item {
+  padding: 2.5rem 0;
 
-//  C O L L E C T I O N   I T E M
-.collection__item .header {
- &__nav {
-  height: 4.9rem;
- }
+  h2 {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &-img {
+    margin-bottom: 4.2rem;
+    width: 100%;
+  }
+
+  &-description {
+    max-width: 62.2rem;
+  }
+
+  .item-small {
+    display: block;
+  }
+
+  .item-large {
+    display: none;
+  }
 }
-
