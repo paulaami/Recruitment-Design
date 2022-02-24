@@ -8,7 +8,6 @@
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Improvements](#improvements)
 
@@ -41,7 +40,8 @@ T he website is not completely compliant with WCAG standards for accessibility.
 
   What has been improved:
 
-    1) Some images provided in the graphic design had too much weight, they were passed through the converter to reduce their weight.
+    1) Some images provided in the graphic design had too much weight, 
+        they were passed through the converter to reduce their weight.
     2) Added line height in text 1.5 (line height in Figma template was too narrow)
 
 This page was also rendered using the React library.
