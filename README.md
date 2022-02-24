@@ -16,7 +16,9 @@
 ## General Information
 
   Website was implemented based on graphic template from Figma. 
+
   Handling of drop down menu and linking depending on the current page has been added in JavaScript files.
+
   Below are suggestions for improving the website according to WCAG principles and a description of the changes made to achieve this goal.
 
 ## Technologies Used
