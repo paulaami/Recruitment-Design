@@ -31,7 +31,7 @@
 
 ## Improvements
 
-T he website is not completely compliant with WCAG standards for accessibility.
+  The website is not completely compliant with WCAG standards for accessibility.
 
   What should be improved:
 
