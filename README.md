@@ -43,5 +43,6 @@
     1) Some images provided in the graphic design had too much weight, 
         they were passed through the converter to reduce their weight.
     2) Added line height in text 1.5 (line height in Figma template was too narrow)
+    3) Added text highlighting on hover actions
 
 This page was also rendered using the React library.
